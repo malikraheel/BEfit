@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Dashboard
+{% endblock title %}
+{% block body %}
+<section>
+  <div class="row">
+    <div class="col-lg-2">
+      <!-- left side bar  -->
+      <nav id="sidebarMenu" class="pl-3 pt-3 d-md-block bg-light sidebar collapse show " style="">
+        <div class="sidebar-sticky pt-0">
+          <ul class="nav flex-column ">
+            <li class="nav-item">
+
+              <h4>{{user.username}} </h4>
+              <img src="/media/{{user.profile.pic}}" class="bd-placeholder-img rounded-circle" width="100" height="100"
+                alt="">
+
+              <a class="nav-link mb-3" href="/gym/profile/{{ user.profile.id }}">Profile</a>
+
+              <a class="nav-link mb-3" href="/gym/videos/chest">Exercise </a>
+              <a class="nav-link mb-3" href="{% url 'schedule' %}">TimeTable</a>
+              <a class="nav-link mb-3" href="{% url 'bmi' %}">Calculate BMI</a>
+            </li>
+
+          </ul>
+        </div>
+      </nav>
+      <!-- end left side bar -->
+
+    </div>
+
+    <div class="col-10">
+      <div class="container-fluid p-0 ">
+        <h2>Time Table</h2>
+
+        <!-- table -->
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Mon</th>
+              <th>Tue</th>
+              <th>Wed</th>
+              <th>Thu</th>
+              <th>Fri</th>
+              <th>Sat</th>
+              <th>Sun</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a href="/gym/videos/">chest</a></td>
+
+              <td><a href="">Back</a></td>
+
+              <td><a href="">scheulder</a></td>
+
+              <td><a href="">BiTri</a></td>
+
+              <td><a href="">Rst</a></td>
+
+              <td><a href="">Leg</a></td>
+
+              <td><a href="">Cardio</a></td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- end table -->
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock body %}

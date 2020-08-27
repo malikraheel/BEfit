@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% csrf_token %}
+{% load crispy_forms_tags %}
+{% block  title %}
+Login
+{% endblock  %}
+{% block content %}
+{% if form.errors %}
+{% for field in form %}
+{% for error in field.errors %}
+<div class="alert alert-danger">
+  <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %}
+{% endfor %}
+{% for error in form.non_field_errors %}
+<div class="alert alert-danger">
+  <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %}
+{% endif %}
+<form class="form-signin" method="post">
+  {% csrf_token %}
+  <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+  <h1 class="h3 mb-3 font-weight-normal">Please Login in</h1>
+  <label for="inputEmail" class="sr-only">User Name</label>
+  <input type="text" name="username" id="username" class="form-control mb-3" placeholder="user name" required=""
+    autofocus="">
+  <label for="inputPassword" class="sr-only">Password</label>
+  <input type="password" name="password" id="password" class="form-control mb-3" placeholder="Password" required="">
+  <!-- <div class="checkbox mb-3">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div> -->
+  <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+  <a class="btn btn-lg btn-success btn-block" href="/accounts/register/">Register</a>
+  <a class="btn btn-lg btn-primary btn-block" href="/accounts/password/reset/">Password Reset</a>
+
+
+</form>
+
+
+{% endblock %}

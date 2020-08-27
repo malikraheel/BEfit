@@ -1,0 +1,123 @@
+body {
+  /* background: #fff;*/
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.swiper-container {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  margin: -15pt;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 300px;
+  height: 300px;
+}
+.clor {
+  color: #fff;
+}
+.btnnn:hover {
+  background-color: blue;
+  color: #fff;
+  border-radius: 25px;
+  margin-top: 15px;
+}
+.tex {
+  color: white;
+}
+.t {
+  color: #ffff55;
+}
+.success {
+  font-size: 17px;
+  color: white;
+  font-weight: lighter;
+}
+.fu {
+  font-size: 15px;
+  color: rgb(12, 12, 12);
+  font-family: sans-serif;
+}
+.b {
+  background-color: rgba(223, 213, 213, 0.753);
+}
+.svr {
+  background: rgb(245, 244, 244);
+}
+.bl {
+  font-weight: bold;
+  font-family: sans-serif;
+}
+.col-sm {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.high {
+  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.whit {
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+}
+.back {
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+  color: rgb(10, 10, 10);
+}
+.bat {
+  color: rgb(0, 0, 0);
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+}
+.blue {
+  color: #8881e4;
+}
+.bdImg {
+  background-image: url("/img/200487.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.pagination {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.preLeft {
+  margin-right: 300pt;
+  background-color: rgb(51, 54, 238);
+  color: white;
+}
+.preLeft:hover {
+  background-color: tomato;
+  color: white;
+  box-shadow: #000;
+}
+.nextRt {
+  margin-left: 300pt;
+  background-color: rgb(51, 54, 238);
+  color: white;
+}
+.nextRt:hover {
+  background-color: tomato;
+  color: white;
+  box-shadow: #000;
+}
+
+.elu {
+  background-color: rgb(51, 54, 238);
+  background: linear-gradient(155deg, #555c155, #2bb, #3bc1ed);
+}
+p {
+  text-align: justify;
+  font-size: large;
+  font-weight: 400;
+  font-style: normal;
+  font-family: Georgia, serif;
+  font-family: "Times New Roman", Times, serif;
+}

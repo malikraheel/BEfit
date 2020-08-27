@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="p-5">
+	<h1 class="myhead2">{{profile.name}}</h1>
+	<hr>
+<div class="row">
+	<div class="col-sm-6">
+	<p><strong>Age :: </strong> {{profile.age}}</p>
+	<p><strong>Gender :: </strong> {{profile.gender}}</p>
+	<p><strong>Address :: </strong> {{profile.address}}</p>
+	<p><strong>Status :: </strong> {{profile.status}}</p>
+	<p><strong>Phone No :: </strong> {{profile.phone_no}}</p>
+	<p><strong>Description :: </strong> {{profile.description}}</p>
+	</div>
+	<div class="col-sm-6">
+		<img class="img-fluid" src="/media/{{profile.pic}}" />
+	</div>
+</div>
+<a href="/gym/profile/edit/{{ user.profile.id }}" class="btn btn-dark">Edit Profile</a>
+<a href="/gym/dashboard/" class="btn btn-dark">Back</a>
+<a class="btn btn-lg btn-primary " href="/accounts/password/change/">Password Change</a>
+</div>
+{% endblock %}

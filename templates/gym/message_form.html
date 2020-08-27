@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<!-- breadcrumb start-->
+<section>
+{% if form.errors %}
+    {% for field in form %}
+        {% for error in field.errors %}
+            <div class="alert alert-danger">
+                <strong>{{ error|escape }}</strong>
+            </div>
+        {% endfor %}
+    {% endfor %}
+    {% for error in form.non_field_errors %}
+        <div class="alert alert-danger">
+            <strong>{{ error|escape }}</strong>
+        </div>
+    {% endfor %}
+{% endif %}
+    <div class="container-fluid jumbotron text-center p-2">
+        <h2>Contact</h2>
+    </div>
+</section>
+
+<!-- breadcrumb start-->
+<section class="contact-section mt-5">
+    <div class="container">
+
+        <iframe src="https://www.google.com/maps/d/embed?mid=1lCz5pUtNn0zAGW-DeORUR5ltvWSmNGR-" width="640"
+            height="480"></iframe>
+        <div class="container mt-5 mb-5">
+            <hr>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <h2 class="contact-title">Be in Touch</h2>
+            </div>
+            <div class="col-lg-8">
+                <form action="" method="post">
+                {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+
+                                <textarea class="form-control w-100" name="msg" id="msg" cols="30" rows="9"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Message'"
+                                    placeholder='Enter Message' required=""></textarea>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control" name="phone_no" id="phone_no" type="text"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'phone number'"
+                                    placeholder='enter phone number'>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <input class="form-control" name="email" id="email" type="email"
+                                    onfocus="this.placeholder = ''"
+                                    onblur="this.placeholder = 'Enter email address'"
+                                    placeholder='Enter email address' required="">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input class="form-control" name="subject" id="subject" type="text"
+                                    onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter Subject'"
+                                    placeholder='Enter Subject' required="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group mt-3">
+                        {% if user.is_authenticated %}
+                        <button class="btn btn-lg btn-primary " type="submit">Send Message</button>
+                        {% else %}
+                        <h2>Please login to send msg </h2>
+                        {% endif %}
+                    </div>
+                </form>
+            </div>
+            <div class="col-lg-4">
+                <div class="media">
+                    <span class="contact-info__icon"><i class="ti-home"></i></span>
+                    <div class="media-body">
+                        <h3>Pakistan, Gujranwala.</h3>
+                        <p> Satelite town</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+                    <div class="media-body">
+                        <h3>0308-6554932</h3>
+                        <p>Mon to Fri 9am to 6pm</p>
+                    </div>
+                </div>
+                <div class="media">
+                    <span class="contact-info__icon"><i class="ti-email"></i></span>
+                    <div class="media-body">
+                        <h3>support@gmail.com</h3>
+                        <p>Send us your query anytime!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ================ contact section end ================= -->
+{% endblock %}

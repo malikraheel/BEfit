@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Features
+{% endblock %}
+
+{% block body %}
+<!-- <a href="/gym/profile/edit/{{ user.profile.id }}" class="btn btn-dark">Edit Profile</a>
+<div class="container mt-5"> -->
+
+
+
+<div class="card-deck mb-3 text-center">
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Free</h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+      <ul class="list-unstyled mt-3 mb-4">
+        <li>videos</li>
+        <li>schedule</li>
+        <li>-</li>
+        <li>-</li>
+        <li>-</li>
+      </ul>
+      <!-- <a href="/gym" class="btn btn-lg btn-primary " type="submit">Get Started</a> -->
+      <a href="/gym/profile/edit/{{ user.profile.id }}" class="btn btn-lg btn-primary " type="submit">Get Started1</a>
+
+
+    </div>
+  </div>
+  <div class="card mb-4 shadow-sm">
+    <div class="card-header">
+      <h4 class="my-0 font-weight-normal">Coming Soon...</h4>
+    </div>
+    <div class="card-body">
+      <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+      <ul class="list-unstyled mt-3 mb-4">
+        <li>Personal Trainer</li>
+        <li>Diet Planer</li>
+        <li>3 online classes per week </li>
+        <li>No time restriction</li>
+        <li>videos</li>
+      </ul>
+      <button type="button" class="btn btn-lg btn-block btn-outline-primary">Coming soon..</button>
+    </div>
+  </div>
+</div>
+</>
+{% endblock %}

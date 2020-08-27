@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block title %}videos{% endblock title %}
+{% block body %}
+<section>
+  <div class="contaner-fluid">
+    <div class="row">
+      <div class="col-lg-2">
+        <!-- left side bar -->
+        <nav id="sidebarMenu" class="pl-3 pt-3 d-md-block bg-light sidebar collapse show " style="">
+          <div class="sidebar-sticky pt-0">
+            <ul class="nav flex-column ">
+              <li class="nav-item">
+                <a class="nav-link mb-3" href="/gym/videos/chest">Chest</a>
+                <a class="nav-link mb-3" href="/gym/videos/back">Back </a>
+                <a class="nav-link mb-3" href="/gym/videos/shoulder">Shoulder</a>
+                <a class="nav-link mb-3" href="/gym/videos/bitri">Bicept/Tricept</a>
+                <a class="nav-link mb-3" href="/gym/videos/leg">Leg</a>
+                <a class="nav-link mb-3" href="/gym/videos/six_pack">Six Pack</a>
+                <a class="nav-link mb-3" href="/gym/videos/cardio">Cardio</a>
+                <a class="nav-link mb-3" href="/gym/videos/weight_lose">Weight lose</a>
+                <a class="nav-link mb-3" href="/gym/videos/balley_lose">Bally loss</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <!-- end left side bar -->
+
+      </div>
+      <div class="col-lg-10">
+        <div class="container-fluid">
+          <div class="row">
+            <h3>{{id}}</h3>
+            {% for m in info5 %}
+            {% for b in m.values %}
+            {% if b != Null %}
+
+            <!-- viedo card -->
+
+            <div class="col-lg-4 col-md-12 mb-4 mt-5">
+              <div class="card mb-4 shadow-sm">
+                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                  <iframe class="embed-responsive-item" src="{{b}}" allowfullscreen></iframe>
+                </div>
+
+                <div class="card-body">
+                  <p class="card-text">{{id}} Workout</p>
+                  <a class="btn btn-sm btn-outline-secondary"
+                    src="https://mdbootstrap.com/img/screens/yt/screen-video-1.jpg" alt="video" data-toggle="modal"
+                    data-target="#modal1">View<a />
+                </div>
+              </div>
+            </div>
+            <!-- end video caed -->
+            {% endif %}
+
+            {% endfor %}
+            {% endfor %}
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}

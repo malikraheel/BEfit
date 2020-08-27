@@ -1,0 +1,159 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} Features
+{% endblock %}
+
+{% block body %}
+<section class="section_padding">
+    <div class="container pt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container box_1170">
+                    <h3 class="text-heading">OUR MISSION</h3>
+                    <p class="sample-text">
+                    “Working as a unified team, we contribute to the growth of fitness of our users by providing
+                    best fitness solutions with the help of videos, professional trainers and different diet plans for
+                    the fitness of our users.”
+                    “Working as a unified team, we contribute to the growth of fitness of our users by providing
+                      best fitness solutions with the help of videos, professional trainers and different diet plans for
+                     the fitness of our users.”
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 pt-5">
+                <!-- Swiper -->
+                <div class="p-lg-0">
+                    <div class="swiper-container ">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url({% static 'images/gallery_1.png' %})">
+                            </div>
+                            <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_2.png' %})"></div>
+                            <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_3.png' %})"></div>
+                            <!-- <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_4.png' %})"></div>
+                            <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_5.png' %})"></div>
+                            <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_6.png' %})"></div> -->
+
+
+
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row pt-5">
+            <div class="col-md-6">
+                <div class="container box_1170">
+                    <h3 class="text-heading">OUR VISION</h3>
+                    <p class="sample-text">
+                    “To be respected and appreciated by our users for the outstanding quality of our work,
+                    experience of our trainers, satisfaction, and the effectiveness of our training programs ”
+                    “To be respected and appreciated by our users for the outstanding quality of our work,
+                    experience of our trainers, satisfaction, and the effectiveness of our training programs ”
+
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 pt-5">
+                <!-- Swiper -->
+                <div class="p-lg-0">
+                    <div class="swiper-container ">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide" style="background-image:url({% static 'images/gallery_4.png' %})">
+                            </div>
+                            <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_5.png' %})"></div>
+                            <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_6.png' %})"></div>
+                            <!-- <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_4.png' %})"></div>
+                            <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_5.png' %})"></div>
+                            <div class="swiper-slide"
+                                style="background-image:url({% static './images/gallery_6.png' %})"></div> -->
+
+
+
+                        </div>
+                        <!-- Add Pagination -->
+                        <div class="swiper-pagination"></div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+
+
+        </div>
+    </div>
+    </div>
+
+</section>
+<div class="container-fluid">
+
+</div>
+
+<div class="jumbotron mt-4">
+    <div class="row pl-3">
+        <div class="col-lg-4">
+            <img src="{% static 'images/raheel.jpg' %}" class="bd-placeholder-img rounded-circle" width="140"
+                height="140" alt="">
+
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies
+                vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
+                cursus
+                magna.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img src="{% static 'images/haris.jpg' %}" class="bd-placeholder-img rounded-circle" width="140"
+                height="140" alt="">
+            <h2>Heading</h2>
+            <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras
+                mattis
+                consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris
+                condimentum
+                nibh.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+        <div class="col-lg-4">
+            <img src="{% static 'images/shazib.jpg' %}" class="bd-placeholder-img rounded-circle" width="140"
+                height="140" alt="">
+            <h2>Heading</h2>
+            <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula
+                porta
+                felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut
+                fermentum
+                massa justo sit amet risus.</p>
+            <p><a class="btn btn-secondary" href="#" role="button">View details »</a></p>
+        </div><!-- /.col-lg-4 -->
+    </div>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

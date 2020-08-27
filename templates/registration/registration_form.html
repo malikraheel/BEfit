@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load crispy_forms_tags %}
+{% if form.errors %}
+{% for field in form %}
+{% for error in field.errors %}
+<div class="alert alert-danger">
+    <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %}
+{% endfor %}
+{% for error in form.non_field_errors %}
+<div class="alert alert-danger">
+    <strong>{{ error|escape }}</strong>
+</div>
+{% endfor %}
+{% endif %}
+
+<main class="p-5">
+    <!-- <div class="row text-justify">
+	<div class="col">
+	<h1 class="myhead2">Register Page</h1>
+	<hr>
+	</div>
+</div>  -->
+    <form class="form-signin" enctype="multipart/form-data" method="post">
+
+        {% csrf_token %}
+        <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+        <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
+        <label for="inputName" class="sr-only">Name</label>
+        <input type="text" name="username" id="username" class="form-control mb-3" placeholder="enter username"
+            required="" autofocus="">
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="email" id="email" class="form-control mb-3" placeholder="Email address" required=""
+            autofocus="">
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="password1" id="password1" class="form-control mb-3" placeholder="Password"
+            required="">
+        <label for="inputPassword" class="sr-only">Confirm Password</label>
+        <input type="password" name="password2" id="password2" class="form-control mb-3" placeholder="Confirm Password"
+            required="">
+
+        <input class="btn btn-primary" type="submit" />
+
+    </form>
+</main>
+{% endblock %}
